@@ -1,0 +1,54 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кликер</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 40px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50; /* Зеленый цвет */
+            color: white;
+        }
+        button:hover {
+            background-color: #45a049; /* Более темный зеленый при наведении */
+        }
+        .score {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Кликер!</h1>
+    <button onclick="incrementScore()">Кликни меня!</button>
+    <div class="score">Счет: <span id="score">0</span></div>
+
+    <script>
+        let score = 0; // Инициализация счетчика кликов
+
+        function incrementScore() {
+            score++; // Увеличение счета на 1
+            document.getElementById('score').innerText = score; // Обновление отображаемого счета
+        }
+    </script>
+
+</body>
+</html>
